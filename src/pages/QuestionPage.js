@@ -1,13 +1,5 @@
-import React from 'react';
-import QuestionComponent from '../components/question/QuestionComponent';
+import { fetchTasks } from "../api/client";
 
-function QuestionPage() {
-  return (
-    <div>
-      <h1>Question Page</h1>
-      <QuestionComponent />
-    </div>
-  );
-}
-
-export default QuestionPage;
+useEffect(() => {
+  fetchTasks().then(data => setTasks(data));
+}, []);
