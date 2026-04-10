@@ -1,13 +1,13 @@
-import React from 'react';
-import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import QuestionPage from "./pages/QuestionPage";
 
 function App() {
   return (
-    <div>
-      <Home />
-
-      {/* TODO: Replace this placeholder with Routes */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<QuestionPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
